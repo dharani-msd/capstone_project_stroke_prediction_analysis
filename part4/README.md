@@ -181,16 +181,22 @@ The complete Track C pipeline was executed on three hand-crafted patient records
 
 **Input	LLM Output	Valid JSON	Pass/Block**
 
--Patient 1 (Age 65, Hypertension=1, Heart Disease=1)	JSON explanation returned	Pass	Pass
+**Task – 5:**
+**End-to-End Pipeline Demonstration:**
 
--Patient 2 (Age 30, Healthy profile)	JSON explanation returned	Pass	Pass
+The complete Track C pipeline was executed on three hand-crafted patient records. For each input, the trained machine learning model generated a prediction and probability. Before calling the LLM, a PII guardrail checked the input for email addresses and phone numbers. Since no PII was detected in the three patient records, all requests were allowed to proceed. The LLM returned structured JSON explanations, and each response was successfully validated against the predefined JSON schema.
 
--Patient 3 (Age 78, Multiple risk factors)	JSON explanation returned	Pass	Pass
+| Input                                               | LLM Output                | Valid JSON | Pass/Block |
+| --------------------------------------------------- | ------------------------- | ---------- | ---------- |
+| Patient 1 (Age 65, Hypertension=1, Heart Disease=1) | JSON explanation returned | Pass       | Pass       |
+| Patient 2 (Age 30, Healthy profile)                 | JSON explanation returned | Pass       | Pass       |
+| Patient 3 (Age 78, Multiple risk factors)           | JSON explanation returned | Pass       | Pass       |
 
 Demonstrate the guardrail blocking a request, include a separate example in the notebook where an input contains an email address and the result is:
 
-**Input	LLM Output	Valid JSON	Pass/Block**
+| Input                         | LLM Output      | Valid JSON | Pass/Block |
+| ----------------------------- | --------------- | ---------- | ---------- |
+| Patient with `john@gmail.com` | Not sent to LLM | N/A        | **Block**  |
 
-Patient with john@gmail.com	Not sent to LLM	N/A	Block
 
 However, for the required three Track C feature vectors, they normally contain no PII, so all three would show Pass in the guardrail column.
