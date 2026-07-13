@@ -43,7 +43,9 @@ The dataset was downloaded from Kaggle, saved locally, and loaded into a pandas 
 
 The stroke prediction dataset was loaded into a pandas DataFrame using the read_csv() function. This dataset served as the foundation for all subsequent data cleaning, exploratory data analysis (EDA), visualization, and machine learning tasks performed in the project.
 
-""" import pandas as pd df = pd.read_csv("healthcare_dataset_stroke_data.csv") """
+""" import pandas as pd
+
+df = pd.read_csv("healthcare_dataset_stroke_data.csv") """
 
 **#Delete columns (not relationship)**
 
@@ -69,7 +71,7 @@ Data type correction was performed to ensure that each column had the appropriat
 
 The pandas to_numeric() function was used to convert values to numeric format, with invalid values handled using errors="coerce".
 
-df[column] = pd.to_numeric(df[column], errors="coerce")
+"""df[column] = pd.to_numeric(df[column], errors="coerce")"""
 
 Correcting data types improves data quality, enables accurate statistical analysis, and ensures compatibility with machine learning algorithms.
 
