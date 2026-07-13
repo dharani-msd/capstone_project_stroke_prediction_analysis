@@ -1,5 +1,5 @@
 
-**##Part -2**                 **Supervised Machine Learning Model — Build, Train, and Evaluate** 
+**##Part -2**                        **Supervised Machine Learning Model — Build, Train, and Evaluate** 
 
 **##Task 1** 
 
