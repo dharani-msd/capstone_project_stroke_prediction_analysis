@@ -1,6 +1,4 @@
-**##Part 4**
-
-                        **LLM-Powered Feature Model Prediction Explanation**
+**##Part 4**          **LLM-Powered Feature Model Prediction Explanation**
 
 **Selected Feature Track: (C) Model Prediction Explanation Pipeline:**
 
